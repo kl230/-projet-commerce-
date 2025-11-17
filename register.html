@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Kaoutar Boutique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style-enhanced.css">
+    <link href="https://unpkg.com/splitting@1.0.6/dist/splitting.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="hero-background"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="resources/logo.jpg" alt="Kaoutar Logo">
+                <span>Kaoutar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house"></i> Accueil
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="bi bi-person"></i> Connexion
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="register.html">
+                            <i class="bi bi-person-plus"></i> Inscription
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-5 mt-5 min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <!-- Registration Card -->
+                    <div class="card bg-glass border-glass shadow-custom reveal">
+                        <div class="card-body p-5">
+                            <!-- Logo -->
+                            <div class="text-center mb-4">
+                                <div class="mb-3">
+                                    <img src="resources/logo.jpg" alt="Kaoutar Logo" style="width: 80px; height: 80px; border-radius: 50%;" class="animate-float">
+                                </div>
+                                <h2 class="mb-2" data-splitting>Créer un compte</h2>
+                                <p class="text-muted">Rejoignez notre communauté de luxe</p>
+                            </div>
+
+                            <!-- Registration Form -->
+                            <form id="registerForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">
+                                            <i class="bi bi-person"></i> Prénom *
+                                        </label>
+                                        <input type="text" class="form-control" id="firstName" placeholder="Votre prénom" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">
+                                            <i class="bi bi-person"></i> Nom *
+                                        </label>
+                                        <input type="text" class="form-control" id="lastName" placeholder="Votre nom" required>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">
+                                        <i class="bi bi-envelope"></i> Email *
+                                    </label>
+                                    <input type="email" class="form-control" id="email" placeholder="Entrez votre email" required>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">
+                                        <i class="bi bi-telephone"></i> Téléphone
+                                    </label>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Numéro de téléphone">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="password" class="form-label">
+                                        <i class="bi bi-lock"></i> Mot de passe *
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="password" placeholder="Créez un mot de passe" required>
+                                        <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </div>
+                                    <div class="form-text">
+                                        Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule et un chiffre.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="confirmPassword" class="form-label">
+                                        <i class="bi bi-lock"></i> Confirmer le mot de passe *
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmez votre mot de passe" required>
+                                        <button class="btn btn-outline-secondary" type="button" id="toggleConfirmPassword">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="terms" required>
+                                        <label class="form-check-label" for="terms">
+                                            J'accepte les <a href="#" class="text-decoration-none">conditions générales</a> et la <a href="#" class="text-decoration-none">politique de confidentialité</a> *
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="newsletter">
+                                        <label class="form-check-label" for="newsletter">
+                                            Je souhaite recevoir les offres exclusives et actualités de Kaoutar
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="d-grid gap-2 mb-4">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="bi bi-person-plus"></i> Créer mon compte
+                                    </button>
+                                </div>
+
+                                <hr class="my-4">
+
+                                <div class="text-center">
+                                    <p class="text-muted mb-3">Déjà un compte ?</p>
+                                    <a href="login.html" class="btn btn-outline-primary">
+                                        <i class="bi bi-box-arrow-in-right"></i> Se connecter
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Benefits -->
+                    <div class="card bg-glass border-glass mt-4 reveal">
+                        <div class="card-body">
+                            <h6 class="mb-3">
+                                <i class="bi bi-gift"></i> Avantages de l'inscription
+                            </h6>
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-2">
+                                    <i class="bi bi-check-circle text-success"></i> Accès à des produits exclusifs
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check-circle text-success"></i> Remises spéciales et offres personnalisées
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check-circle text-success"></i> Suivi de commande simplifié
+                                </li>
+                                <li class="mb-2">
+                                    <i class="bi bi-check-circle text-success"></i> Service client prioritaire
+                                </li>
+                                <li class="mb-0">
+                                    <i class="bi bi-check-circle text-success"></i> Newsletter avec tendances et nouveautés
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="card bg-glass border-glass mt-4 reveal">
+                        <div class="card-body text-center">
+                            <h6 class="mb-3">Sécurité garantie</h6>
+                            <div class="row">
+                                <div class="col-4">
+                                    <i class="bi bi-shield-check text-success" style="font-size: 1.5rem;"></i>
+                                    <p class="small mt-1">Sécurisé</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="bi bi-lock text-primary" style="font-size: 1.5rem;"></i>
+                                    <p class="small mt-1">SSL</p>
+                                </div>
+                                <div class="col-4">
+                                    <i class="bi bi-check-circle text-warning" style="font-size: 1.5rem;"></i>
+                                    <p class="small mt-1">Vérifié</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-glass border-glass mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 Kaoutar Boutique. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-links">
+                        <a href="#" class="text-muted me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <script>
+        // Initialize Splitting.js for text animations
+        Splitting();
+        
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', revealOnScroll);
+        
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('password');
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
+        });
+        
+        // Toggle confirm password visibility
+        document.getElementById('toggleConfirmPassword').addEventListener('click', function() {
+            const passwordInput = document.getElementById('confirmPassword');
+            const icon = this.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('bi-eye');
+                icon.classList.add('bi-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('bi-eye-slash');
+                icon.classList.add('bi-eye');
+            }
+        });
+        
+        // Registration form submission
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validate passwords match
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                showNotification('Les mots de passe ne correspondent pas', 'danger');
+                return;
+            }
+            
+            const button = document.querySelector('button[type="submit"]');
+            const originalText = button.innerHTML;
+            
+            // Show loading state
+            button.classList.add('btn-loading');
+            button.innerHTML = '<i class="bi bi-arrow-clockwise"></i> Création...';
+            button.disabled = true;
+            
+            // Simulate registration process
+            setTimeout(() => {
+                // Show success
+                button.classList.remove('btn-loading');
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-success');
+                button.innerHTML = '<i class="bi bi-check"></i> Compte créé !';
+                
+                // Show success notification
+                showNotification('Compte créé avec succès ! Bienvenue chez Kaoutar !', 'success');
+                
+                // Redirect to dashboard
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 2000);
+                
+            }, 2500);
+        });
+        
+        // Show notification
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 100px; right: 20px; z-index: 9999; min-width: 300px;';
+            notification.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+        
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate main title
+            anime({
+                targets: 'h2 .char',
+                translateY: [100, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1400,
+                delay: (el, i) => 30 * i
+            });
+            
+            // Animate cards
+            anime({
+                targets: '.card',
+                translateY: [30, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: (el, i) => 100 * i
+            });
+            
+            // Animate form elements
+            anime({
+                targets: '.form-control, .form-check, .btn',
+                translateX: [-50, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 800,
+                delay: (el, i) => 50 * i
+            });
+        });
+    </script>
+</body>
+</html>

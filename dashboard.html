@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - Kaoutar Boutique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style-enhanced.css">
+    <link href="https://unpkg.com/splitting@1.0.6/dist/splitting.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="hero-background"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">
+                <img src="resources/logo.jpg" alt="Kaoutar Logo">
+                <span>Kaoutar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <span class="nav-link">
+                            <i class="bi bi-person-circle"></i> Bonjour, Client
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart"></i> Panier
+                            <span class="badge bg-danger badge-cart">3</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="my_orders.html">
+                            <i class="bi bi-box"></i> Mes commandes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-box-arrow-right"></i> Déconnexion
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-5 mt-5">
+        <div class="container">
+            <!-- Welcome Section -->
+            <div class="row mb-5 reveal">
+                <div class="col-12 text-center">
+                    <h1 class="mb-3" data-splitting>Bienvenue dans votre boutique</h1>
+                    <p class="lead">Découvrez nos produits exclusifs et profitez d'une expérience d'achat unique</p>
+                </div>
+            </div>
+
+            <!-- Stats Section (Admin View) -->
+            <div class="row mb-5 reveal">
+                <div class="col-md-3 mb-3">
+                    <div class="card stats-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title mb-0">125</h5>
+                                    <p class="card-text">Produits disponibles</p>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="bi bi-box-seam" style="font-size: 2rem; color: var(--primary-color);"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card stats-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title mb-0">98</h5>
+                                    <p class="card-text">En stock</p>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="bi bi-check-circle" style="font-size: 2rem; color: var(--success-color);"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card stats-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title mb-0">1,247</h5>
+                                    <p class="card-text">Clients satisfaits</p>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="bi bi-people" style="font-size: 2rem; color: var(--accent-color);"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="card stats-card">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h5 class="card-title mb-0">856</h5>
+                                    <p class="card-text">Commandes traitées</p>
+                                </div>
+                                <div class="align-self-center">
+                                    <i class="bi bi-cart-check" style="font-size: 2rem; color: var(--warning-color);"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search and Filter Section -->
+            <div class="row mb-4 reveal">
+                <div class="col-md-8">
+                    <div class="input-group">
+                        <span class="input-group-text bg-glass border-glass">
+                            <i class="bi bi-search"></i>
+                        </span>
+                        <input type="text" class="form-control bg-glass border-glass" placeholder="Rechercher des produits...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="bi bi-search"></i> Rechercher
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <select class="form-select bg-glass border-glass">
+                        <option selected>Toutes les catégories</option>
+                        <option value="1">Sacs à main</option>
+                        <option value="2">Montres</option>
+                        <option value="3">Bijoux</option>
+                        <option value="4">Accessoires</option>
+                        <option value="5">Chaussures</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-md-4 mb-4 reveal">
+                    <div class="card product-card h-100 shadow-custom">
+                        <div class="no-image">
+                            <i class="bi bi-handbag"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Sac à main en cuir italien</h5>
+                            <p class="card-text text-primary fw-bold fs-4">€299.00</p>
+                            <p class="card-text">
+                                <span class="badge bg-success">En stock (15)</span>
+                                <span class="badge bg-secondary">Cuir</span>
+                                <span class="badge bg-info">Italie</span>
+                            </p>
+                            <p class="card-text text-muted small flex-grow-1">
+                                Magnifique sac à main en cuir véritable fabriqué en Italie. Design élégant et intemporel.
+                            </p>
+                            <div class="d-grid gap-2 mt-3">
+                                <a href="product_details.html" class="btn btn-outline-primary">
+                                    <i class="bi bi-eye"></i> Voir les détails
+                                </a>
+                                <button class="btn btn-success" onclick="addToCart(1)">
+                                    <i class="bi bi-cart-plus"></i> Ajouter au panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="col-md-4 mb-4 reveal">
+                    <div class="card product-card h-100 shadow-custom">
+                        <div class="no-image">
+                            <i class="bi bi-watch"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Montre de luxe suisse</h5>
+                            <p class="card-text text-primary fw-bold fs-4">€599.00</p>
+                            <p class="card-text">
+                                <span class="badge bg-success">En stock (8)</span>
+                                <span class="badge bg-info">Suisse</span>
+                                <span class="badge bg-warning">Édition limitée</span>
+                            </p>
+                            <p class="card-text text-muted small flex-grow-1">
+                                Montre mécanique de précision avec boîtier en acier inoxydable et bracelet en cuir.
+                            </p>
+                            <div class="d-grid gap-2 mt-3">
+                                <a href="product_details.html" class="btn btn-outline-primary">
+                                    <i class="bi bi-eye"></i> Voir les détails
+                                </a>
+                                <button class="btn btn-success" onclick="addToCart(2)">
+                                    <i class="bi bi-cart-plus"></i> Ajouter au panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="col-md-4 mb-4 reveal">
+                    <div class="card product-card h-100 shadow-custom">
+                        <div class="no-image">
+                            <i class="bi bi-gem"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Collier en or 18k</h5>
+                            <p class="card-text text-primary fw-bold fs-4">€899.00</p>
+                            <p class="card-text">
+                                <span class="badge bg-warning">Stock limité (3)</span>
+                                <span class="badge bg-secondary">Or 18k</span>
+                                <span class="badge bg-danger">Vente flash</span>
+                            </p>
+                            <p class="card-text text-muted small flex-grow-1">
+                                Collier élégant en or 18 carats avec pendentif en forme de cœur. Cadeau parfait.
+                            </p>
+                            <div class="d-grid gap-2 mt-3">
+                                <a href="product_details.html" class="btn btn-outline-primary">
+                                    <i class="bi bi-eye"></i> Voir les détails
+                                </a>
+                                <button class="btn btn-success" onclick="addToCart(3)">
+                                    <i class="bi bi-cart-plus"></i> Ajouter au panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="col-md-4 mb-4 reveal">
+                    <div class="card product-card h-100 shadow-custom">
+                        <div class="no-image">
+                            <i class="bi bi-bag"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Sac bandoulière vintage</h5>
+                            <p class="card-text text-primary fw-bold fs-4">€189.00</p>
+                            <p class="card-text">
+                                <span class="badge bg-success">En stock (12)</span>
+                                <span class="badge bg-secondary">Cuir vintage</span>
+                            </p>
+                            <p class="card-text text-muted small flex-grow-1">
+                                Sac bandoulière en cuir vintage avec finition artisanale. Parfait pour un usage quotidien.
+                            </p>
+                            <div class="d-grid gap-2 mt-3">
+                                <a href="product_details.html" class="btn btn-outline-primary">
+                                    <i class="bi bi-eye"></i> Voir les détails
+                                </a>
+                                <button class="btn btn-success" onclick="addToCart(4)">
+                                    <i class="bi bi-cart-plus"></i> Ajouter au panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="col-md-4 mb-4 reveal">
+                    <div class="card product-card h-100 shadow-custom">
+                        <div class="no-image">
+                            <i class="bi bi-bracelet"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Bracelet en argent</h5>
+                            <p class="card-text text-primary fw-bold fs-4">€159.00</p>
+                            <p class="card-text">
+                                <span class="badge bg-success">En stock (20)</span>
+                                <span class="badge bg-secondary">Argent 925</span>
+                            </p>
+                            <p class="card-text text-muted small flex-grow-1">
+                                Bracelet élégant en argent sterling avec design moderne et fermoir sécurisé.
+                            </p>
+                            <div class="d-grid gap-2 mt-3">
+                                <a href="product_details.html" class="btn btn-outline-primary">
+                                    <i class="bi bi-eye"></i> Voir les détails
+                                </a>
+                                <button class="btn btn-success" onclick="addToCart(5)">
+                                    <i class="bi bi-cart-plus"></i> Ajouter au panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="col-md-4 mb-4 reveal">
+                    <div class="card product-card h-100 shadow-custom">
+                        <div class="no-image">
+                            <i class="bi bi-sunglasses"></i>
+                        </div>
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Lunettes de soleil designer</h5>
+                            <p class="card-text text-primary fw-bold fs-4">€129.00</p>
+                            <p class="card-text">
+                                <span class="badge bg-success">En stock (25)</span>
+                                <span class="badge bg-info">UV400</span>
+                            </p>
+                            <p class="card-text text-muted small flex-grow-1">
+                                Lunettes de soleil avec monture en acétate et verres polarisés. Protection UV400.
+                            </p>
+                            <div class="d-grid gap-2 mt-3">
+                                <a href="product_details.html" class="btn btn-outline-primary">
+                                    <i class="bi bi-eye"></i> Voir les détails
+                                </a>
+                                <button class="btn btn-success" onclick="addToCart(6)">
+                                    <i class="bi bi-cart-plus"></i> Ajouter au panier
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link bg-glass border-glass" href="#" tabindex="-1">
+                                    <i class="bi bi-chevron-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item active">
+                                <a class="page-link bg-primary border-primary" href="#">1</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link bg-glass border-glass" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link bg-glass border-glass" href="#">3</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link bg-glass border-glass" href="#">
+                                    <i class="bi bi-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-glass border-glass mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 Kaoutar Boutique. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-links">
+                        <a href="#" class="text-muted me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <script>
+        // Initialize Splitting.js for text animations
+        Splitting();
+        
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', revealOnScroll);
+        
+        // Add to cart function
+        function addToCart(productId) {
+            const button = event.target;
+            const originalText = button.innerHTML;
+            
+            // Show loading state
+            button.classList.add('btn-loading');
+            button.innerHTML = '<i class="bi bi-arrow-clockwise"></i> Ajout...';
+            button.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Show success
+                button.classList.remove('btn-loading');
+                button.classList.remove('btn-success');
+                button.classList.add('btn-success');
+                button.innerHTML = '<i class="bi bi-check"></i> Ajouté !';
+                
+                // Update cart badge
+                const badge = document.querySelector('.badge-cart');
+                const currentCount = parseInt(badge.textContent);
+                badge.textContent = currentCount + 1;
+                
+                // Show notification
+                showNotification('Produit ajouté au panier avec succès !', 'success');
+                
+                // Reset button after delay
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.disabled = false;
+                }, 2000);
+                
+            }, 1000);
+        }
+        
+        // Show notification
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 100px; right: 20px; z-index: 9999; min-width: 300px;';
+            notification.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+        
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate main title
+            anime({
+                targets: 'h1 .char',
+                translateY: [100, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1400,
+                delay: (el, i) => 30 * i
+            });
+            
+            // Animate stats cards
+            anime({
+                targets: '.stats-card',
+                translateY: [50, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: (el, i) => 200 * i
+            });
+            
+            // Animate product cards
+            anime({
+                targets: '.product-card',
+                translateY: [30, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 800,
+                delay: (el, i) => 100 * i
+            });
+        });
+    </script>
+</body>
+</html>

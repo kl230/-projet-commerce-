@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation de commande - Kaoutar Boutique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style-enhanced.css">
+    <link href="https://unpkg.com/splitting@1.0.6/dist/splitting.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="hero-background"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">
+                <img src="resources/logo.jpg" alt="Kaoutar Logo">
+                <span>Kaoutar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <span class="nav-link">
+                            <i class="bi bi-person-circle"></i> Bonjour, Client
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">
+                            <i class="bi bi-shop"></i> Boutique
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="my_orders.html">
+                            <i class="bi bi-box"></i> Mes commandes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-box-arrow-right"></i> Déconnexion
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-5 mt-5">
+        <div class="container">
+            <!-- Success Message -->
+            <div class="row mb-5 reveal">
+                <div class="col-12 text-center">
+                    <div class="animate-float mb-4">
+                        <i class="bi bi-check-circle-fill text-success" style="font-size: 5rem;"></i>
+                    </div>
+                    <h1 class="mb-3 text-success" data-splitting>Merci pour votre commande !</h1>
+                    <p class="lead">Votre commande a été confirmée et sera traitée dans les plus brefs délais.</p>
+                    <div class="alert alert-success bg-glass border-glass mt-4">
+                        <h5 class="alert-heading">
+                            <i class="bi bi-envelope-check"></i> Email de confirmation envoyé
+                        </h5>
+                        <p class="mb-0">Un email de confirmation avec tous les détails de votre commande a été envoyé à votre adresse email.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Details -->
+            <div class="row">
+                <!-- Order Information -->
+                <div class="col-lg-8 mb-4">
+                    <div class="card bg-glass border-glass">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="bi bi-receipt"></i> Détails de la commande #CMD-2024-001247
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Order Status -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <h6>Statut de la commande</h6>
+                                    <p class="text-success fw-bold mb-1">
+                                        <i class="bi bi-check-circle"></i> Confirmée
+                                    </p>
+                                    <p class="text-muted small">Commande passée le 05/11/2024 à 14:30</p>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Livraison estimée</h6>
+                                    <p class="fw-bold mb-1">
+                                        <i class="bi bi-calendar-check"></i> 10/11/2024 - 12/11/2024
+                                    </p>
+                                    <p class="text-muted small">Livraison standard gratuite</p>
+                                </div>
+                            </div>
+
+                            <!-- Order Items -->
+                            <h6 class="mb-3">Articles commandés</h6>
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Produit</th>
+                                            <th>Quantité</th>
+                                            <th>Prix unitaire</th>
+                                            <th>Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="no-image me-3" style="width: 50px; height: 50px; font-size: 1rem;">
+                                                        <i class="bi bi-handbag"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="mb-0">Sac à main en cuir italien</h6>
+                                                        <small class="text-muted">Cuir véritable • Fabriqué en Italie</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>€299.00</td>
+                                            <td>€299.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="no-image me-3" style="width: 50px; height: 50px; font-size: 1rem;">
+                                                        <i class="bi bi-watch"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="mb-0">Montre de luxe suisse</h6>
+                                                        <small class="text-muted">Mécanique • Bracelet cuir</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>€599.00</td>
+                                            <td>€599.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="no-image me-3" style="width: 50px; height: 50px; font-size: 1rem;">
+                                                        <i class="bi bi-gem"></i>
+                                                    </div>
+                                                    <div>
+                                                        <h6 class="mb-0">Collier en or 18k</h6>
+                                                        <small class="text-muted">Or 18 carats • Pendentif cœur</small>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>1</td>
+                                            <td>€899.00</td>
+                                            <td>€899.00</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Information -->
+                    <div class="card bg-glass border-glass mt-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="bi bi-geo-alt"></i> Informations de livraison
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>Adresse de livraison</h6>
+                                    <address class="mb-0">
+                                        <strong>Marie Dupont</strong><br>
+                                        123 Rue de la République<br>
+                                        75001 Paris<br>
+                                        France<br>
+                                        <i class="bi bi-telephone"></i> 06 12 34 56 78
+                                    </address>
+                                </div>
+                                <div class="col-md-6">
+                                    <h6>Mode de livraison</h6>
+                                    <p class="mb-1">
+                                        <i class="bi bi-truck"></i> Livraison standard
+                                    </p>
+                                    <p class="text-muted small mb-0">
+                                        Livraison sous 3-5 jours ouvrables
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="card bg-glass border-glass">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="bi bi-calculator"></i> Récapitulatif
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Sous-total (3 articles)</span>
+                                <span class="fw-bold">€1,797.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Livraison</span>
+                                <span class="text-success">Gratuite</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>TVA (20%)</span>
+                                <span>€359.40</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Remise code promo</span>
+                                <span class="text-success">-€50.00</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-4">
+                                <span class="h5 mb-0">Total payé</span>
+                                <span class="h5 mb-0 text-primary">€2,106.40</span>
+                            </div>
+                            
+                            <!-- Payment Method -->
+                            <div class="mb-4">
+                                <h6>Paiement</h6>
+                                <p class="mb-1">
+                                    <i class="bi bi-credit-card"></i> Carte bancaire
+                                </p>
+                                <p class="text-muted small mb-0">
+                                    **** **** **** 4242 - 12/25
+                                </p>
+                            </div>
+
+                            <!-- Actions -->
+                            <div class="d-grid gap-2">
+                                <a href="invoice.html" class="btn btn-outline-primary">
+                                    <i class="bi bi-file-earmark-pdf"></i> Télécharger la facture
+                                </a>
+                                <a href="my_orders.html" class="btn btn-primary">
+                                    <i class="bi bi-box"></i> Suivre ma commande
+                                </a>
+                                <a href="dashboard.html" class="btn btn-secondary">
+                                    <i class="bi bi-shop"></i> Continuer mes achats
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Customer Service -->
+                    <div class="card bg-glass border-glass mt-4">
+                        <div class="card-body text-center">
+                            <h6 class="mb-3">Service client</h6>
+                            <p class="small text-muted mb-3">
+                                Une question sur votre commande ?
+                            </p>
+                            <div class="d-grid gap-2">
+                                <a href="#" class="btn btn-outline-secondary btn-sm">
+                                    <i class="bi bi-chat-dots"></i> Chat en ligne
+                                </a>
+                                <a href="#" class="btn btn-outline-secondary btn-sm">
+                                    <i class="bi bi-telephone"></i> 01 23 45 67 89
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-glass border-glass mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 Kaoutar Boutique. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-links">
+                        <a href="#" class="text-muted me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <script>
+        // Initialize Splitting.js for text animations
+        Splitting();
+        
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', revealOnScroll);
+        
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate success icon
+            anime({
+                targets: '.bi-check-circle-fill',
+                scale: [0, 1],
+                rotate: [0, 360],
+                easing: 'easeOutElastic(1, .8)',
+                duration: 1000,
+                delay: 500
+            });
+            
+            // Animate main title
+            anime({
+                targets: 'h1 .char',
+                translateY: [100, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1400,
+                delay: (el, i) => 30 * i
+            });
+            
+            // Animate cards
+            anime({
+                targets: '.card',
+                translateY: [30, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: (el, i) => 100 * i
+            });
+            
+            // Animate table rows
+            anime({
+                targets: 'tbody tr',
+                translateX: [-50, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 800,
+                delay: (el, i) => 100 * i
+            });
+            
+            // Show welcome notification
+            setTimeout(() => {
+                showNotification('Bienvenue dans l\'espace client de Kaoutar !', 'info');
+            }, 2000);
+        });
+        
+        // Show notification
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 100px; right: 20px; z-index: 9999; min-width: 300px;';
+            notification.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commande - Kaoutar Boutique</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style-enhanced.css">
+    <link href="https://unpkg.com/splitting@1.0.6/dist/splitting.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="hero-background"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top glass">
+        <div class="container">
+            <a class="navbar-brand" href="dashboard.html">
+                <img src="resources/logo.jpg" alt="Kaoutar Logo">
+                <span>Kaoutar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <span class="nav-link">
+                            <i class="bi bi-person-circle"></i> Bonjour, Client
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">
+                            <i class="bi bi-shop"></i> Boutique
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart"></i> Panier
+                            <span class="badge bg-danger">3</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-box-arrow-right"></i> Déconnexion
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-5 mt-5">
+        <div class="container">
+            <!-- Header -->
+            <div class="row mb-5 reveal">
+                <div class="col-12">
+                    <h1 class="mb-3" data-splitting>Finaliser la commande</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb bg-glass border-glass p-3 rounded">
+                            <li class="breadcrumb-item"><a href="dashboard.html" class="text-decoration-none">Accueil</a></li>
+                            <li class="breadcrumb-item"><a href="cart.html" class="text-decoration-none">Panier</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Commande</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <!-- Checkout Steps -->
+            <div class="row mb-5 reveal">
+                <div class="col-12">
+                    <div class="progress bg-glass border-glass" style="height: 4px;">
+                        <div class="progress-bar bg-primary" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-4 text-center">
+                            <i class="bi bi-person-circle text-primary"></i>
+                            <p class="small mt-1 mb-0">Informations</p>
+                        </div>
+                        <div class="col-4 text-center">
+                            <i class="bi bi-truck text-muted"></i>
+                            <p class="small mt-1 mb-0">Livraison</p>
+                        </div>
+                        <div class="col-4 text-center">
+                            <i class="bi bi-credit-card text-muted"></i>
+                            <p class="small mt-1 mb-0">Paiement</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Checkout Form -->
+            <div class="row">
+                <!-- Shipping Information -->
+                <div class="col-lg-8 mb-4">
+                    <div class="card bg-glass border-glass">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="bi bi-person-circle"></i> Informations de livraison
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <form id="checkoutForm">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="firstName" class="form-label">Prénom *</label>
+                                        <input type="text" class="form-control" id="firstName" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="lastName" class="form-label">Nom *</label>
+                                        <input type="text" class="form-control" id="lastName" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Téléphone *</label>
+                                    <input type="tel" class="form-control" id="phone" required>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="address" class="form-label">Adresse *</label>
+                                    <input type="text" class="form-control" id="address" placeholder="123 Rue de la République" required>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-4 mb-3">
+                                        <label for="zipCode" class="form-label">Code postal *</label>
+                                        <input type="text" class="form-control" id="zipCode" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="city" class="form-label">Ville *</label>
+                                        <input type="text" class="form-control" id="city" required>
+                                    </div>
+                                    <div class="col-md-4 mb-3">
+                                        <label for="country" class="form-label">Pays *</label>
+                                        <select class="form-control" id="country" required>
+                                            <option value="">Sélectionner...</option>
+                                            <option value="FR">France</option>
+                                            <option value="BE">Belgique</option>
+                                            <option value="CH">Suisse</option>
+                                            <option value="LU">Luxembourg</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="notes" class="form-label">Notes de livraison (optionnel)</label>
+                                    <textarea class="form-control" id="notes" rows="3" placeholder="Instructions spéciales pour la livraison..."></textarea>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" id="saveAddress">
+                                    <label class="form-check-label" for="saveAddress">
+                                        Sauvegarder cette adresse pour mes prochaines commandes
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Method -->
+                    <div class="card bg-glass border-glass mt-4">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="bi bi-truck"></i> Mode de livraison
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="radio" name="shippingMethod" id="standard" value="standard" checked>
+                                <label class="form-check-label" for="standard">
+                                    <strong>Livraison standard</strong> - Gratuite
+                                    <br>
+                                    <small class="text-muted">Livraison sous 3-5 jours ouvrables</small>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="shippingMethod" id="express" value="express">
+                                <label class="form-check-label" for="express">
+                                    <strong>Livraison express</strong> - €15.00
+                                    <br>
+                                    <small class="text-muted">Livraison sous 1-2 jours ouvrables</small>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="col-lg-4">
+                    <div class="card bg-glass border-glass">
+                        <div class="card-header">
+                            <h5 class="mb-0">
+                                <i class="bi bi-receipt"></i> Résumé de la commande
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <!-- Order Items -->
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="d-flex align-items-center">
+                                        <div class="no-image me-2" style="width: 40px; height: 40px; font-size: 0.8rem;">
+                                            <i class="bi bi-handbag"></i>
+                                        </div>
+                                        <div>
+                                            <small class="d-block">Sac à main en cuir</small>
+                                            <small class="text-muted">Qté: 1</small>
+                                        </div>
+                                    </div>
+                                    <small class="fw-bold">€299.00</small>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="d-flex align-items-center">
+                                        <div class="no-image me-2" style="width: 40px; height: 40px; font-size: 0.8rem;">
+                                            <i class="bi bi-watch"></i>
+                                        </div>
+                                        <div>
+                                            <small class="d-block">Montre de luxe</small>
+                                            <small class="text-muted">Qté: 1</small>
+                                        </div>
+                                    </div>
+                                    <small class="fw-bold">€599.00</small>
+                                </div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <div class="no-image me-2" style="width: 40px; height: 40px; font-size: 0.8rem;">
+                                            <i class="bi bi-gem"></i>
+                                        </div>
+                                        <div>
+                                            <small class="d-block">Collier en or</small>
+                                            <small class="text-muted">Qté: 1</small>
+                                        </div>
+                                    </div>
+                                    <small class="fw-bold">€899.00</small>
+                                </div>
+                            </div>
+                            
+                            <!-- Order Summary -->
+                            <hr>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Sous-total</span>
+                                <span class="fw-bold">€1,797.00</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Livraison</span>
+                                <span class="text-success">Gratuite</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>TVA (20%)</span>
+                                <span>€359.40</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-2">
+                                <span>Remise code promo</span>
+                                <span class="text-success">-€50.00</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="h5 mb-0">Total</span>
+                                <span class="h5 mb-0 text-primary">€2,106.40</span>
+                            </div>
+                            
+                            <!-- Promo Code -->
+                            <div class="mb-3">
+                                <div class="input-group input-group-sm">
+                                    <input type="text" class="form-control" placeholder="Code promo" value="WELCOME50" readonly>
+                                    <button class="btn btn-outline-success" type="button" disabled>Appliqué</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Payment Button -->
+                            <div class="d-grid gap-2">
+                                <button type="button" class="btn btn-primary btn-lg" onclick="processPayment()">
+                                    <i class="bi bi-credit-card"></i> Payer €2,106.40
+                                </button>
+                                <p class="small text-muted text-center mb-0">
+                                    <i class="bi bi-shield-check"></i> Paiement sécurisé SSL
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Trust Badges -->
+                    <div class="card bg-glass border-glass mt-4">
+                        <div class="card-body text-center">
+                            <h6 class="mb-3">Paiement sécurisé</h6>
+                            <div class="row">
+                                <div class="col-3">
+                                    <i class="bi bi-credit-card text-primary" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <div class="col-3">
+                                    <i class="bi bi-paypal text-info" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <div class="col-3">
+                                    <i class="bi bi-bank text-warning" style="font-size: 1.5rem;"></i>
+                                </div>
+                                <div class="col-3">
+                                    <i class="bi bi-apple text-dark" style="font-size: 1.5rem;"></i>
+                                </div>
+                            </div>
+                            <p class="small text-muted mt-2 mb-0">Cartes bancaires, PayPal, Apple Pay</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-glass border-glass mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2024 Kaoutar Boutique. Tous droits réservés.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="social-links">
+                        <a href="#" class="text-muted me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-muted me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-muted"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <script>
+        // Initialize Splitting.js for text animations
+        Splitting();
+        
+        // Scroll reveal animation
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', revealOnScroll);
+        
+        // Process payment function
+        function processPayment() {
+            const form = document.getElementById('checkoutForm');
+            
+            // Validate form
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+            
+            const button = event.target;
+            const originalText = button.innerHTML;
+            
+            // Show loading state
+            button.classList.add('btn-loading');
+            button.innerHTML = '<i class="bi bi-arrow-clockwise"></i> Traitement...';
+            button.disabled = true;
+            
+            // Simulate payment processing
+            setTimeout(() => {
+                // Show success
+                button.classList.remove('btn-loading');
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-success');
+                button.innerHTML = '<i class="bi bi-check"></i> Paiement réussi !';
+                
+                // Show success notification
+                showNotification('Paiement traité avec succès ! Redirection vers la confirmation...', 'success');
+                
+                // Redirect to confirmation page
+                setTimeout(() => {
+                    window.location.href = 'order_confirmation.html';
+                }, 2000);
+                
+            }, 3000);
+        }
+        
+        // Show notification
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            notification.style.cssText = 'top: 100px; right: 20px; z-index: 9999; min-width: 300px;';
+            notification.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    notification.remove();
+                }
+            }, 5000);
+        }
+        
+        // Update shipping method
+        document.querySelectorAll('input[name="shippingMethod"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const shippingCost = this.value === 'express' ? 15.00 : 0.00;
+                updateOrderSummary(shippingCost);
+            });
+        });
+        
+        // Update order summary
+        function updateOrderSummary(shippingCost) {
+            // This would normally update the order summary with new shipping costs
+            console.log('Shipping cost updated:', shippingCost);
+        }
+        
+        // Initialize animations
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate main title
+            anime({
+                targets: 'h1 .char',
+                translateY: [100, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1400,
+                delay: (el, i) => 30 * i
+            });
+            
+            // Animate cards
+            anime({
+                targets: '.card',
+                translateY: [30, 0],
+                opacity: [0, 1],
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: (el, i) => 100 * i
+            });
+            
+            // Animate progress bar
+            anime({
+                targets: '.progress-bar',
+                width: '33%',
+                easing: 'easeOutExpo',
+                duration: 1000,
+                delay: 500
+            });
+        });
+    </script>
+</body>
+</html>
